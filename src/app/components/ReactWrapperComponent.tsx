@@ -50,7 +50,7 @@ export class ReactWrapperComponent implements OnChanges, OnDestroy, AfterViewIni
   @Output() componentClick = new EventEmitter<void>();
 
 
-  constructor() {
+  constructor(private el: ElementRef) {
     this.handleDivClicked = this.handleDivClicked.bind(this);
   }
 
@@ -61,7 +61,6 @@ export class ReactWrapperComponent implements OnChanges, OnDestroy, AfterViewIni
   }
 
   ngAfterViewInit() {
-    console.log('Container Ref=', this.containerRef);
     this.render();
   }
 
@@ -79,9 +78,13 @@ export class ReactWrapperComponent implements OnChanges, OnDestroy, AfterViewIni
 
   private render() {
     const { counter } = this;
-    ReactDOM.render(<div className={'i-am-classy'}>
-      <ReactComponent counter={counter} onClick={this.handleDivClicked}/>
-    </div>, this.containerRef.nativeElement);
+    ReactDOM.render(
+      <div className={'i-am-classy'}>
+        <ReactComponent counter={counter} onClick={this.handleDivClicked}/>
+      </div>,
+      this.containerRef.nativeElement
+      // -or- this.el.nativeElement,
+    );
   }
 
 }
