@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ReactWrapperComponent } from 'src/app/components/ReactWrapperComponent';
 import { DashLoaderComponent } from './dash/dash-loader/dash-loader.component';
 
+import { ScriptService } from './services/script.service';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -17,7 +19,9 @@ import { DashLoaderComponent } from './dash/dash-loader/dash-loader.component';
     ReactWrapperComponent,
     DashLoaderComponent
   ],
-  providers: [],
+  providers: [
+    ScriptService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
