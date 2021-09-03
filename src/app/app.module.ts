@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { ReactWrapperComponent } from 'src/app/components/ReactWrapperComponent';
+import { DashLoaderComponent } from './dash/dash-loader/dash-loader.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { ReactWrapperComponent } from 'src/app/components/ReactWrapperComponent'
   ],
   declarations: [
     AppComponent,
-    ReactWrapperComponent
+    ReactWrapperComponent,
+    DashLoaderComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
