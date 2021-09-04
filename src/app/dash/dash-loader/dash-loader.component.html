@@ -1,11 +1,10 @@
-<script id="_dash-config" type="application/json">{"url_base_pathname": null, "requests_pathname_prefix": "https://poc-dash-oa.azurewebsites.net/", "ui": false, "props_check": false, "show_undo_redo": false, "suppress_callback_exceptions": false, "update_title": "Updating..."}</script>
 <script
   id="_dash-renderer"
   type="application/javascript"
   *ngIf="depsLoaded"
 >var renderer = new DashRenderer();</script>
 <div
-  *ngIf="entryPointLoaded"
+  *ngIf="depsLoaded && configLoaded"
   id="react-entry-point"
 >
     <div class="_dash-loading">

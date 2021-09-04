@@ -61,6 +61,30 @@ export class ScriptService {
     });
   }
 
+  loadJsonScript(id: string, obj: any): Promise<any> {
+    return new Promise((resolve, reject) => {
+      let content: string = '';
+      try {
+        content = JSON.stringify(obj);
+      } catch (error) {
+        resolve({script: id, loaded: false, status: 'NotLoaded'})
+      }
+      let script = document.createElement('script');
+      script.id = id;
+      script.type = `application/json`;
+      script.text = content;
+      // script.onload = () => {
+      //     resolve({script: id, loaded: true, status: 'Loaded'});
+      // };
+      // script.onerror = (_err: any) => resolve({script: id, loaded: false, status: 'Loaded'});
+      document.getElementsByTagName('head')[0].appendChild(script);
+      setTimeout(
+        () => resolve({script: id, loaded: true, status: 'Loaded'}),
+        100
+      );
+    });
+  }
+
 
   private initialize(): void {
     ScriptStore.map((x: any) => {

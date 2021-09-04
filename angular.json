@@ -37,7 +37,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/dashRenderer.js"
+            ]
           },
           "configurations": {
             "production": {

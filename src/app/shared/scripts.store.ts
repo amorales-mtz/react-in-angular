@@ -11,4 +11,5 @@ export const ScriptStore: Scripts[] = [
     {name: 'dashDeps8', src: 'https://poc-dash-oa.azurewebsites.net/_dash-component-suites/dash_core_components/dash_core_components-shared.v1_17_1m1630641790.js'},
     {name: 'dashDeps9', src: 'https://poc-dash-oa.azurewebsites.net/_dash-component-suites/dash_bootstrap_components/_components/dash_bootstrap_components.v0_13_0m1630641796.min.js'},
     {name: 'dashDeps10', src: 'https://poc-dash-oa.azurewebsites.net/_dash-component-suites/dash/dash-renderer/build/dash_renderer.v1_21_0m1630641792.min.js'},
+    {name: 'dashRenderer', src: 'assets/dashRenderer.js'},
 ];
