@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
       // Get the HTML element
       const element = dashHTML.querySelector('#react-entry-point').innerHTML;
       const nextElement = dashHTML.querySelector('#react-entry-point').nextElementSibling.innerHTML;
-      console.log(element);
     })();
   }
 

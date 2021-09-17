@@ -35,6 +35,7 @@ window.ReactDom = window.ReactDom || ReactDOM;
  * eventually unmounting the wrapped component when the wrapper is destroyed.
  */
 
+// See: https://github.com/nareshdevabatini/samplesPoc/blob/e270a9571543d6d434dd4a2360be7c79038d09c6/arpoc/src/app/sketch/photoeditor/photoeditor.component.ts
 @Component({
   selector: 'app-react-wrapper',
   template: `<span #${containerElementName}></span>`,

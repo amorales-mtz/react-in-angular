@@ -1,13 +1,11 @@
-<script
-  id="_dash-renderer"
-  type="application/javascript"
-  *ngIf="depsLoaded"
->var renderer = new DashRenderer();</script>
-<div
-  *ngIf="depsLoaded && configLoaded"
-  id="react-entry-point"
->
-    <div class="_dash-loading">
-        Loading...
-    </div>
+<script id="_dash-renderer" type="application/javascript"
+        *ngIf="depsLoaded">
+  var renderer = new DashRenderer();
+</script>
+
+<div id="react-entry-point"
+     *ngIf="configLoaded && depsLoaded">
+  <div class="_dash-loading">
+    Loading...
+  </div>
 </div>
